@@ -1,9 +1,10 @@
 <?php
+// ex 1
 class Employee {
     private string $name;
     private int $salary;
 
-    public function setEmployeeInfo($name, $salary) {
+    public function __construct(string $name, int $salary) {
         $this->name = $name;
         $this->salary = $salary;
     }
@@ -18,12 +19,10 @@ class Employee {
     }
 }
 
-$employee1 = new Employee();
-$employee1->setEmployeeInfo("Camila", 8000);
+$employee1 = new Employee("Camila", 8000);
 $employee1->printTaxInfo();
 
-$employee2 = new Employee();
-$employee2->setEmployeeInfo("Amir", 5000);
+$employee2 = new Employee("Amir", 5000);
 $employee2->printTaxInfo();
 
 // ex 2
